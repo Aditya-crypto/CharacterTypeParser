@@ -14,7 +14,7 @@ Command Line Argument: -f -s aditya -n 40 -a 4.66 -p asd -p fgh -p jkl
 ### 2. Program functioning with description of classes and their methods
 - ArgsMain.java :
  This class is used to pass Schema to the Args class and check the values that is set for corresponding character.
-- Args.java : 
+- CharacterParser.java : 
     1. This is a supervise class which is performing three different functions using three different classes.
     2. The three functioning includes-
        -Parsing Given schema and populating map with charType objects.
@@ -26,12 +26,12 @@ Command Line Argument: -f -s aditya -n 40 -a 4.66 -p asd -p fgh -p jkl
 - ParseArgument.java :
     - This class is used to fill variable values based on given command line argument String,
     - and fill set<character> to check the corresponding char value is set or not.
-- BooleanArgumentMarshaler :set boolean variable value as true or false accordingly.
-- StringArgumentMarshaler : Intitalizes String corresponding to character passed
-- StringArrayArgumentMarshaler : Intitalizes Multiplte Strings corresponding to character passed as Array
-- IntegerArgumentMarshaler : Intitalizes Integer corresponding to character passed
-- DoubleArgumentMarshaler : Intitalizes Double corresponding to character passed
-- MapArgumentMarshaler : Intitalizes String Map corresponding to character passed
+- BooleanInitializer :set boolean variable value as true or false accordingly.
+- StringInitializer : Intitalizes String corresponding to character passed
+- StringArrayInitializer : Intitalizes Multiplte Strings corresponding to character passed as Array
+- IntegerInitializer : Intitalizes Integer corresponding to character passed
+- DoubleInitializer : Intitalizes Double corresponding to character passed
+- MapInitializer : Intitalizes String Map corresponding to character passed
 
 
 ## 5. cleaning Techniques Implimented aprior
