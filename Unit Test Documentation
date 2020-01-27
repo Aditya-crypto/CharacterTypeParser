@@ -1,0 +1,66 @@
+==Test Cases Handled aprior
+
+1. ["-f -s"]
+   -The program throws "Argument Error", as no value is given for s.
+
+2. ["-h"]
+   -The program throws "Argument Error", as h is not defined as a part of schema.
+
+3. ["-q *"]
+   -The program doesn't throw any error, but while printing stringArray displays [build] in place of [*].
+
+4. ["-x -qwerty"]
+   -The program throws "Argument Error", as x is not defined as a part of schema and qwerty is not a valid argument.
+
+5. ["&"]
+   -The program runs as background process.
+
+6. ["-f s Bob"]
+   -The program will set value of f as true, but s will be set to default value.
+
+
+==Test Handled
+
+1. ["-f -sn aditya 7"]
+   - Original Behaviour: 
+     The program was initially setting value of f as true, s as richa and n as 48.
+   - After Modification:
+     The program throws "Unexpected Argument" error on giving above input.
+   - Code Added: 
+     Implemented a check inside parseArgumentStrings method of "StringArgumentParser.java", to check that string 
+     length after "-" is 1.
+   
+2. ["-qwerty"]
+   
+   - After Modification: 
+     The program throws "Unexpected Argument" error on giving above input.
+   - Modifications made: 
+     Implemented a check inside parseArgumentStrings method of "StringArgumentParser.java", to check that string 
+     length after "-" is 1.
+                                                  
+3. ["$"]
+   - Original Behaviour: 
+     The program was initially not giving any error, but setting everything to default value.
+   - After Modification:
+     The program throws Unexpected Argument error on giving above input.
+   - Code Added: 
+     Implemented a check inside parseArgumentStrings method of "StringArgumentParser.java", to check that string 
+     argument string should start with "-"
+                         
+4. ["--"]
+   - Original Behaviour: 
+     The program was initially setting value deafult values for all variables.
+   - After Modification: 
+     The program throws Unexpected Argument error on giving above input.
+   - Code Added: 
+     Implemented a check inside parseArgumentStrings method of "StringArgumentParser.java", to check that string 
+     length after "-" is 1 and argument should be valid.
+                         
+5. ["- -"]
+   - Original Behaviour: 
+     The program was initially setting value deafult values for all variables.
+   - After Modification: 
+     The program throws Unexpected Argument error on giving above input.
+   - Code Added: 
+     Implemented a check inside parseArgumentStrings method of "StringArgumentParser.java", to check that string 
+     length after "-" is 1 and argument should be valid.
