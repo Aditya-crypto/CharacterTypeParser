@@ -1,7 +1,7 @@
 # Software Engineering
 ## Name: Aditya Gupta Roll No: 2019201067
-## 1. AIM 
-The aim of the JAVA program is to take a schema of characters along with corresponding command line argument containing respective character values.\
+## 1. Synopsis
+This program is (written in JAVA Programming Language)  taking a schema along with corresponding command line argument containing respective character values.
 Schema: f,s*,a##,n#,p[*] \
 Schema:
  - char    - Boolean arg.
@@ -9,46 +9,54 @@ Schema:
  - char#   - Integer arg.
  - char##  - double arg.
  - char[*] - one element of a string array\
-Command Line Argument: -f -s Bob -n 10 -a 3.2 -p e1 -p e2
+Command Line Argument: -f -s aditya -n 40 -a 4.66 -p asd -p fgh -p jkl
 
-## 2. IMPLEMENTED FEATURES
-- Modularity
-- Exception handling
-- Dynamic Input Processing
-- Inheritance
-- Interface Overriding
-- Each Class Contains a Constructor
-
-### Methods Functionality
-- ArgsMain.java : Passes the schema and command line argument to Args Class for Schema initialization
-- Args.java : 1. Creates a Map for each schema containing <Character,ArgumentMarshaler>, ArgumentMarshaler corresponds to each                  type conversion class.
-              2. Creates a Set representing character set or not.
-- ParseSchema.java : 1. Map Initialization, Schema is split and each character is associated with corresponding                                         ArgumentMarshaler class.
-                     2. returns Map to Args.java
-- ParseArgument.java : Set Initialization and returns Set to Args.java
-- BooleanArgumentMarshaler : If Character present value=true else false
+### 2. Program functioning with description of classes and their methods
+- ArgsMain.java :
+ This class is used to pass Schema to the Args class and check the values that is set for corresponding character.
+- Args.java : 
+    1. This is a supervise class which is performing three different functions using three different classes.
+    2. The three functioning includes-
+       -Parsing Given schema and populating map with charType objects.
+       -parsing dynamic command line input to set different values to different variables of different datatypes.
+       -To find the variables values of different types, and also to check whether variable value is set or not.
+- ParseSchema.java : 
+    1. It populates Map<char,ArgumentMarshaler> with character and its respective datatype objects defined by given Schema
+    2. returns populated Map to Args.java
+- ParseArgument.java :
+    - This class is used to fill variable values based on given command line argument String,
+    - and fill set<character> to check the corresponding char value is set or not.
+- BooleanArgumentMarshaler :set boolean variable value as true or false accordingly.
 - StringArgumentMarshaler : Intitalizes String corresponding to character passed
 - StringArrayArgumentMarshaler : Intitalizes Multiplte Strings corresponding to character passed as Array
 - IntegerArgumentMarshaler : Intitalizes Integer corresponding to character passed
 - DoubleArgumentMarshaler : Intitalizes Double corresponding to character passed
 - MapArgumentMarshaler : Intitalizes String Map corresponding to character passed
 
-## 3. Code Cleaning Techniques
-   1. Modularity: Simple Code with small methods and classes.
-      - Small Functions
-      - Each Function is doing a single task
-      - Less Nested Structure
-      - Minimum Number of Arguments i.e. at max 3 
-   2. Clear understanding of the code with proper flow.
-   3. Naming Convention: Clear Naming of Variables,Functions and Classes to provide ease in understanding of Code.
-      - Used Intention revealing Name - related to the solution
-      - Used one Word Per Concept for clarity
-   4. DRY Principle : Do Not Repeat Yourself , Writing Code in Functions and CLasses to not repat Code
-      - Inheritance
-      - Overriding
-   5. Intelligent Comments : Only Comment where Required
-   6. Error Handling : Throwing exceptions is better than returning different codes dependent on errors.
+
+## 5. cleaning Techniques Implimented aprior
+   1. Number of lines in methods should not exceed to 7-8.
+   2. Methods should have less than three arguments.
+   3. Comments shouldbe ignored as much as they can be.
+   4. Exception handling is handled, but not completely.
+
+## 3. IMPLEMENTED FEATURES
+   - Exception handling
+   - Interface method Overriding
+   - Modularity
+   - Class with  default constructor
+   - command line input processing(Dynamic)
+   - Inheritance
+
+
+## 4. Code Cleaning Techniques
+   1. Modularity of Tasks are divided into sub-tasks
+   2. Readability criteria
+   3. Naming itself should include its definition
+   4. redundancy removal
+   5. comments strictly when required
+   6. removal of Errors with exception handling
    7. Reusability of Code
    8. Access Specifiers : public, private, protected 
-      - proper security for data
+
       
