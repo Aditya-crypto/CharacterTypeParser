@@ -34,13 +34,13 @@ Command Line Argument: -f -s aditya -n 40 -a 4.66 -p asd -p fgh -p jkl
 - MapInitializer : Intitalizes String Map corresponding to character passed
 
 
-## 5. cleaning Techniques Implimented aprior
+## 3. cleaning Techniques Implimented aprior
    1. Number of lines in methods should not exceed to 7-8.
    2. Methods should have less than three arguments.
    3. Comments shouldbe ignored as much as they can be.
    4. Exception handling is handled, but not completely.
 
-## 3. IMPLEMENTED FEATURES
+## 4. IMPLEMENTED FEATURES
    - Exception handling
    - Interface method Overriding
    - Modularity
@@ -49,7 +49,7 @@ Command Line Argument: -f -s aditya -n 40 -a 4.66 -p asd -p fgh -p jkl
    - Inheritance
 
 
-## 4. Code Cleaning Techniques
+## 5. Code Cleaning Techniques
    1. Modularity of Tasks are divided into sub-tasks
    2. Readability criteria
    3. Naming itself should include its definition
