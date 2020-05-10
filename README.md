@@ -1,5 +1,4 @@
 # Software Engineering
-## Name: Aditya Gupta Roll No: 2019201067
 ## 1. Synopsis
 This program is (written in JAVA Programming Language)  taking a schema along with corresponding command line argument containing respective character values.
 Schema: f,s*,a##,n#,p[*] \
